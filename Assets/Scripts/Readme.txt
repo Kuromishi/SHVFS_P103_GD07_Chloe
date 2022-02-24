@@ -13,4 +13,6 @@ The mop will disappear if you throw away, so you need to wait for another one.
 
 Limited time to see which bear occupies the most area.
      
+Or maybe just make the floor different color to distinguish zones like Splatoon.
+
 4. Display the amount of the zone controlled by each bear in the Gamescreen.

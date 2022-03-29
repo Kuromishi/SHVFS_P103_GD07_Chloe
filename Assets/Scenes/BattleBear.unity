@@ -249,6 +249,8 @@ MonoBehaviour:
   lookSpeed: 10
   cameraContainer: {fileID: 220994020}
   m_playerID: 0
+  shootSpawnPos: {fileID: 783188029}
+  shootItem: {fileID: 7100793057787289841, guid: f482cb30567671d438423f1506917561, type: 3}
 --- !u!1 &61729605
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +574,7 @@ PrefabInstance:
     - target: {fileID: 13700004, guid: b7e10e6faa72e074888c402c5a76cf81, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 82b58b32caa00f840a885cc685a0ac72, type: 2}
+      objectReference: {fileID: 2100000, guid: 80c783de8f9d2de49aa80661a4466819, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e10e6faa72e074888c402c5a76cf81, type: 3}
 --- !u!1 &514913232
@@ -1048,7 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783188029}
   m_Layer: 0
-  m_Name: ShootPosition
+  m_Name: ShootSpawnPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1276,7 +1278,7 @@ PrefabInstance:
     - target: {fileID: 13700004, guid: b7e10e6faa72e074888c402c5a76cf81, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ecc2d29dcc1c732468d26693df1bf4af, type: 2}
+      objectReference: {fileID: 2100000, guid: ad7596f0acaeee94e94ebedeb6de1a3c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e10e6faa72e074888c402c5a76cf81, type: 3}
 --- !u!1 &1561153002 stripped
@@ -1325,6 +1327,8 @@ MonoBehaviour:
   lookSpeed: 10
   cameraContainer: {fileID: 732669021}
   m_playerID: 1
+  shootSpawnPos: {fileID: 2052711708}
+  shootItem: {fileID: 7100793057787289841, guid: f482cb30567671d438423f1506917561, type: 3}
 --- !u!114 &1561153007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,6 +2109,36 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &2052711707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052711708}
+  m_Layer: 0
+  m_Name: ShootSpawnPos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052711708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052711707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.821, y: 1.252, z: 0.902}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1561153003}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5666653643842675505
 PrefabInstance:
   m_ObjectHideFlags: 0

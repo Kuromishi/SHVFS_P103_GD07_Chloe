@@ -25,16 +25,25 @@ public class PlayerLogic : MonoBehaviour
     private bool canJump;
     protected Animator anim;
 
-    CharacterController characterController;
+   // CharacterController characterController;
 
     [SerializeField]
     PlayerID m_playerID;
 
-    private void Start()
+    [SerializeField]
+    Transform shootSpawnPos;
+
+    [SerializeField]
+    GameObject shootItem;
+
+    private void Awake()
     {
-        characterController = GetComponent<CharacterController>();
+        //characterController = GetComponent<CharacterController>();
         rigidBody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+    }
+    private void Start()
+    {
         anim.SetBool("Grounded", true);
     }
 
@@ -58,6 +67,12 @@ public class PlayerLogic : MonoBehaviour
         {
             canJump = true;
         }
+
+        if(Input.GetButtonDown("Fire1"+m_playerID))
+        {
+            Instantiate(shootItem, shootSpawnPos.transform.position, transform.rotation);
+        }
+
         if (isGround == false)
         {
             anim.SetBool("Grounded", false);
@@ -66,6 +81,7 @@ public class PlayerLogic : MonoBehaviour
         {
             anim.SetBool("Grounded", true);
         }
+
         var turnInput = Input.GetAxis("Mouse X"+m_playerID);
         processedTurnInput = turnInput;
         var lookInput = Input.GetAxis("Mouse Y"+m_playerID);
@@ -82,7 +98,7 @@ public class PlayerLogic : MonoBehaviour
             canJump = false;
         }
     }
-    public void OnCollisionEnter(Collision collision) //Better way£ºRaycast
+    public void OnCollisionEnter(Collision collision) 
     {
         if (collision.gameObject.GetComponent<ground>() != null)
         {

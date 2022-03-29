@@ -213,6 +213,24 @@ CapsuleCollider:
   m_Height: 2.0887952
   m_Direction: 1
   m_Center: {x: 0, y: 1.0424101, z: 0}
+--- !u!143 &21801809
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21801804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.0001
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &21801810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,37 +240,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 21801804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a1bedbfcc5cf540bc9c77d582d5513, type: 3}
+  m_Script: {fileID: 11500000, guid: fd322169dfa9f754697531d573bedf83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackGUIDComponent: {fileID: 21801811}
---- !u!114 &21801811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21801804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5033b141473864f80b1c0648f2ed45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &21801813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21801804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c46bb81f7eac8a84d94e944616ab31cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: 5
-  JumpHeight: 300
-  CameraContainer: {fileID: 220994020}
+  movementSpeed: 5
+  jumpHeight: 300
+  turnSpeed: 100
+  lookSpeed: 10
+  cameraContainer: {fileID: 220994020}
+  m_playerID: 0
 --- !u!1 &61729605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1038,36 @@ Transform:
   m_Father: {fileID: 1561153003}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &783188028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783188029}
+  m_Layer: 0
+  m_Name: ShootPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783188029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783188028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.779, y: 1.302, z: 0.693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 132589899}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927089245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1195,7 @@ PrefabInstance:
     - target: {fileID: 5666653642729995991, guid: 046a74a44356e6540aeaa1869a352901, type: 3}
       propertyPath: AttackGUIDComponent
       value: 
-      objectReference: {fileID: 1561153004}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 046a74a44356e6540aeaa1869a352901, type: 3}
 --- !u!1001 &1561153001
@@ -1263,18 +1289,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b7e10e6faa72e074888c402c5a76cf81, type: 3}
   m_PrefabInstance: {fileID: 1561153001}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1561153004
-MonoBehaviour:
+--- !u!143 &1561153004
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561153002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5033b141473864f80b1c0648f2ed45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.0001
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1561153005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,10 +1316,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561153002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a1bedbfcc5cf540bc9c77d582d5513, type: 3}
+  m_Script: {fileID: 11500000, guid: fd322169dfa9f754697531d573bedf83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackGUIDComponent: {fileID: 1561153004}
+  movementSpeed: 5
+  jumpHeight: 300
+  turnSpeed: 100
+  lookSpeed: 10
+  cameraContainer: {fileID: 732669021}
+  m_playerID: 1
 --- !u!114 &1561153007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,21 +1410,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!114 &1561153011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561153002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001ac4b408093d54a95496efa7c32b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: 5
-  JumpHeight: 300
-  CameraContainer: {fileID: 732669021}
 --- !u!1 &1642013609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a1bedbfcc5cf540bc9c77d582d5513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackGUIDComponent: {fileID: 21801811}
+  AttackGUIDComponent: {fileID: 0}
 --- !u!1 &1842291048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2167,6 @@ PrefabInstance:
     - target: {fileID: 5666653642729995991, guid: 046a74a44356e6540aeaa1869a352901, type: 3}
       propertyPath: AttackGUIDComponent
       value: 
-      objectReference: {fileID: 21801811}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 046a74a44356e6540aeaa1869a352901, type: 3}

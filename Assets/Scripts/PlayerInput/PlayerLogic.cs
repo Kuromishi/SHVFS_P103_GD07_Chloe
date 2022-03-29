@@ -24,6 +24,7 @@ public class PlayerLogic : MonoBehaviour
     private bool isGround;
     private bool canJump;
     protected Animator anim;
+    private float bulletNum;
 
    // CharacterController characterController;
 
@@ -44,6 +45,7 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Start()
     {
+        bulletNum = 7;
         anim.SetBool("Grounded", true);
     }
 
@@ -68,9 +70,10 @@ public class PlayerLogic : MonoBehaviour
             canJump = true;
         }
 
-        if(Input.GetButtonDown("Fire1" + m_playerID))
+        if(Input.GetButtonDown("Fire1" + m_playerID) && bulletNum>0)
         {
             Instantiate(shootItem, shootSpawnPos.transform.position, transform.rotation);
+            bulletNum--;
         }
 
         if (isGround == false)
@@ -103,6 +106,10 @@ public class PlayerLogic : MonoBehaviour
         if (collision.gameObject.GetComponent<ground>() != null)
         {
             isGround = true;
+        }
+        if (collision.gameObject.GetComponent<GunSpawn>() !=null && bulletNum == 0)
+        {
+            bulletNum = 7;
         }
     }
     public void OnCollisionExit(Collision collision)

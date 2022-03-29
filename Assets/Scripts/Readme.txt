@@ -7,12 +7,9 @@ Chloe
 Details for feature 2+3:
 Several zones. The bear can shoot projectile into zones. 
 When there are enough balls in the zone(And more than another bear), the area belongs to you. 
-Also, you can use a mop(Secondary weapon) to push the projectile away. 
-Grab different weapons with limited projectile in different weapon Spawn Point.   
-The mop will disappear if you throw away, so you need to wait for another one. 
+Also, you can jump into the zone to push the projectile away. 
+Grab weapons with limited projectile in different weapon Spawn Point.   
 
 Limited time to see which bear occupies the most area.
      
-Or maybe just make the floor different color to distinguish zones like Splatoon.
-
 4. Display the amount of the zone controlled by each bear in the Gamescreen.

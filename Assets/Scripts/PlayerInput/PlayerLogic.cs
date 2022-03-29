@@ -119,4 +119,8 @@ public class PlayerLogic : MonoBehaviour
             isGround = false;
         }
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        
+    }
 }

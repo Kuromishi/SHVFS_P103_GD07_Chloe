@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6913774847160707617}
   - component: {fileID: -4544186115447341851}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82b58b32caa00f840a885cc685a0ac72, type: 2}
+  - {fileID: 2100000, guid: 6a4a9cd798f58bf419164a016513c59e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7100793057787289841}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965b8018441362f4ea48bb86ace2345f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 200

@@ -10,10 +10,12 @@ public class BulletLogic : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
-        if(rigidBody)
-        {
-            rigidBody.velocity = transform.forward * bulletSpeed;
-        }
+        gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+        gameObject.GetComponent<Rigidbody>().AddForce(transform.up * bulletSpeed);
+        //if (rigidBody)
+        //{
+        //    rigidBody.velocity = transform.forward * bulletSpeed;
+        //}
     }
     private void Update()
     {

@@ -50,8 +50,8 @@ public class PlayerLogic : MonoBehaviour
     private void Update()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        horizontalInput = Input.GetAxis("Horizontal"+m_playerID);
-        verticalInput = Input.GetAxis("Vertical"+m_playerID);
+        horizontalInput = Input.GetAxis("Horizontal" + m_playerID);
+        verticalInput = Input.GetAxis("Vertical" + m_playerID);
         processedInput = transform.right * horizontalInput + transform.forward * verticalInput;
 
         if (horizontalInput != 0 || verticalInput != 0)
@@ -63,12 +63,12 @@ public class PlayerLogic : MonoBehaviour
             anim.SetFloat("Speed", 0);
         }
 
-        if (Input.GetButtonDown("Jump"+m_playerID) && isGround == true)
+        if (Input.GetButtonDown("Jump" + m_playerID) && isGround == true)
         {
             canJump = true;
         }
 
-        if(Input.GetButtonDown("Fire1"+m_playerID))
+        if(Input.GetButtonDown("Fire1" + m_playerID))
         {
             Instantiate(shootItem, shootSpawnPos.transform.position, transform.rotation);
         }
@@ -82,9 +82,9 @@ public class PlayerLogic : MonoBehaviour
             anim.SetBool("Grounded", true);
         }
 
-        var turnInput = Input.GetAxis("Mouse X"+m_playerID);
+        var turnInput = Input.GetAxis("Mouse X" + m_playerID);
         processedTurnInput = turnInput;
-        var lookInput = Input.GetAxis("Mouse Y"+m_playerID);
+        var lookInput = Input.GetAxis("Mouse Y" + m_playerID);
         processedLookInput = lookInput;
         cameraContainer.Rotate(new Vector3(processedLookInput, 0f, 0f) * lookSpeed * Time.deltaTime);
     }
@@ -104,7 +104,6 @@ public class PlayerLogic : MonoBehaviour
         {
             isGround = true;
         }
-
     }
     public void OnCollisionExit(Collision collision)
     {

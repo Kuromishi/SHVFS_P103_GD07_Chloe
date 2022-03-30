@@ -10,7 +10,6 @@ Chloe
 3. Zone control.
    Three empty zones.
    When there are more balls than the other bear's, the area belongs to you. 
-   Also, you can go into space and push the ball away.
 4.Random bullet spawn place changing
    You only have seven bullets at a time. You need to fill the bullets in a changed position.
 5.Display the amount of the zone controlled by each bear in the Gamescreen.

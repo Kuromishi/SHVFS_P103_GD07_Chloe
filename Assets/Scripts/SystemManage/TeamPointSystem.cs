@@ -10,13 +10,14 @@ using System;
         //Need a way to get all the team members when this thing is added to the scene
         //Need a way for team member to register DYNAMICALLY as THEY are added to the scene
         public List<Team> teams = new List<Team>();
+        private Zone[] zones;
         //public int minNum=2;
 
 
     public override void Awake()
         {
             base.Awake();
-            
+            zones = FindObjectsOfType<Zone>();
             var scorerComponents = FindObjectsOfType<ScorerComponent>();
 
             foreach (var scorerComponent in scorerComponents) //每一个成员
@@ -69,9 +70,28 @@ using System;
             //}
             }
         }
+    private void Update()
+    {
+        CalculateScore();
+
 
     }
-
+    public void CalculateScore()
+    {
+        int totalscore=0;
+        for(int j = 0; j < teams.Count; j++)
+        {
+            for (int i = 0; i < zones.Length; i++)
+            {
+                totalscore += zones[i].bearScore[j];
+            }
+            teams[j].TeamScore = totalscore;
+            Debug.Log("Team " + $"{teams[j].ID}" + "'s score=" + $"{teams[j].TeamScore}");
+            totalscore = 0;
+        }
+    }
+}
+    
     [Serializable] 
     public class Team
     {

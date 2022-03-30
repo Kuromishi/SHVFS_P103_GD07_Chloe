@@ -10,7 +10,7 @@ using System;
         //Need a way to get all the team members when this thing is added to the scene
         //Need a way for team member to register DYNAMICALLY as THEY are added to the scene
         public List<Team> teams = new List<Team>();
-        public int minNum=2;
+        //public int minNum=2;
 
 
     public override void Awake()

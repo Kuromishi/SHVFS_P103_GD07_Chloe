@@ -8,9 +8,10 @@ Chloe
 2. Shoot projectile. 
    The bear can shoot projectile into several zones. 
 3. Zone control.
-   When there are enough balls in the zone(And more than another bear's), the area belongs to you. 
+   Three empty zones.
+   When there are more balls than the other bear's, the area belongs to you. 
    Also, you can go into space and push the ball away.
-4.Random bullet changing
+4.Random bullet spawn place changing
    You only have seven bullets at a time. You need to fill the bullets in a changed position.
 5.Display the amount of the zone controlled by each bear in the Gamescreen.
   [Countdown] Limited time to see which bear occupies the most area.(GUI Display)

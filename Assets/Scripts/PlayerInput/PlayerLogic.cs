@@ -52,12 +52,13 @@ public class PlayerLogic : MonoBehaviour
     {
         bulletNum = 7;
         anim.SetBool("Grounded", true);
-       // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);
+        // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+
         horizontalInput = Input.GetAxis("Horizontal" + m_playerID);
         verticalInput = Input.GetAxis("Vertical" + m_playerID);
         processedInput = transform.right * horizontalInput + transform.forward * verticalInput;

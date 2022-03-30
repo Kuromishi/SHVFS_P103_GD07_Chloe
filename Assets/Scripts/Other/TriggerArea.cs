@@ -50,7 +50,7 @@ public class TriggerArea : MonoBehaviour
             }
             var teams = TeamPointSystem.Instance.teams;
             
-            if (IsSameID && TriggerBearID.Count >= TeamPointSystem.Instance.minNum )
+            if (IsSameID)//&& TriggerBearID.Count >= TeamPointSystem.Instance.minNum
             {
                 for (var i = 0; i < teams.Count; i++)
                 {

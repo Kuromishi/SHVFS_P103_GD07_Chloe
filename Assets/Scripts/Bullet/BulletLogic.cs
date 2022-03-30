@@ -6,6 +6,7 @@ public class BulletLogic : MonoBehaviour
 {
     Rigidbody rigidBody;
     public float bulletSpeed;
+    public int BulletID;
 
     private void Start()
     {

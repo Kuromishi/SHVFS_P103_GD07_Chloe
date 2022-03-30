@@ -4,8 +4,9 @@ Chloe
 
 4 features:
 1. Local multi player, 2 bears.
+   One uses keyboard, one uses XBox Controller.
 2. Shoot projectile. 
-    Several zones. The bear can shoot projectile into zones. 
+   The bear can shoot projectile into several zones. 
 3. Zone control.
    When there are enough balls in the zone(And more than another bear's), the area belongs to you. 
    Also, you can go into space and push the ball away.

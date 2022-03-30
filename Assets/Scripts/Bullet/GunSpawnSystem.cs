@@ -15,9 +15,9 @@ public class GunSpawnSystem : MonoBehaviour
         tickTimer += Time.deltaTime;
         if (tickTimer < tickRate) return;
         var index= Random.Range(0, GunSpawnPointTransform.Length);
-        var gun= Instantiate(GunSpawnPointPrefabs, GunSpawnPointTransform[index].position, Quaternion.identity);//销毁生成的这个，并不是prefab
+        var gunSpawn= Instantiate(GunSpawnPointPrefabs, GunSpawnPointTransform[index].position, Quaternion.identity);//销毁生成的这个，并不是prefab
         tickTimer = 0;
 
-        Destroy(gun, 4);
+        Destroy(gunSpawn, 4);
     }
 }

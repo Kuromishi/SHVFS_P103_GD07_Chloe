@@ -25,8 +25,11 @@ public class PlayerLogic : MonoBehaviour
     private bool canJump;
     protected Animator anim;
     private float bulletNum;
+    //public GameObject gunPrefabs;
+    //public Transform gunPrefabsTransform;
+    //private GameObject gun;
 
-   // CharacterController characterController;
+    // CharacterController characterController;
 
     [SerializeField]
     PlayerID m_playerID;
@@ -37,16 +40,19 @@ public class PlayerLogic : MonoBehaviour
     [SerializeField]
     GameObject shootItem;
 
+
     private void Awake()
     {
         //characterController = GetComponent<CharacterController>();
         rigidBody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+
     }
     private void Start()
     {
         bulletNum = 7;
         anim.SetBool("Grounded", true);
+       // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);
     }
 
     private void Update()
@@ -74,6 +80,10 @@ public class PlayerLogic : MonoBehaviour
         {
             Instantiate(shootItem, shootSpawnPos.transform.position, transform.rotation);
             bulletNum--;
+            //if(bulletNum==0)
+            //{
+            //    Destroy(gun);
+            //}
         }
 
         if (isGround == false)
@@ -107,10 +117,7 @@ public class PlayerLogic : MonoBehaviour
         {
             isGround = true;
         }
-        if (collision.gameObject.GetComponent<GunSpawn>() !=null && bulletNum == 0)
-        {
-            bulletNum = 7;
-        }
+
     }
     public void OnCollisionExit(Collision collision)
     {
@@ -121,6 +128,11 @@ public class PlayerLogic : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.GetComponent<GunSpawn>() != null && bulletNum == 0)
+        {
+
+            bulletNum = 7;
+           // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);
+        }
     }
 }

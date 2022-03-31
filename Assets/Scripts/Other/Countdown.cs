@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    private float totalTime = 10;
+    private float totalTime = 90;
     public Text countDownText;//在UI里显示时间
     private float intervalTime = 1;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zone : MonoBehaviour
 {
     private int teamNum;
-    public List<int>[] TriggerBulletID;
+    public List<int>[] triggerBulletID;
     private int maxTeamID;
     private int maxBall;
     [HideInInspector]
@@ -14,27 +14,27 @@ public class Zone : MonoBehaviour
     private void Start()
     {
         teamNum = TeamPointSystem.Instance.teams.Count;
-        TriggerBulletID = new List<int>[teamNum];
+        triggerBulletID = new List<int>[teamNum];
         bearScore = new int[teamNum];
-        for (int i = 0; i < TriggerBulletID.Length; i++)
+        for (int i = 0; i < triggerBulletID.Length; i++)
         {
-            TriggerBulletID[i] = new List<int>();
+            triggerBulletID[i] = new List<int>();
         }
     }
     private void Update()
     {
         var teams = TeamPointSystem.Instance.teams;
     
-        if (TriggerBulletID.Length>0)
+        if (triggerBulletID.Length>0)
         {
             maxTeamID = -1;
             maxBall = 0;
-            for(int i=0 ; i<TriggerBulletID.Length ; i++)
+            for(int i=0 ; i<triggerBulletID.Length ; i++)
             {
                 //Debug.Log(TriggerBulletID[i]);
-                if ( TriggerBulletID[i].Count > maxBall)//一方子弹数大于之前的最多子弹数
+                if ( triggerBulletID[i].Count > maxBall)//一方子弹数大于之前的最多子弹数
                 {
-                    maxBall = TriggerBulletID[i].Count;
+                    maxBall = triggerBulletID[i].Count;
                     maxTeamID = i;                          
                     
                 }
@@ -56,14 +56,14 @@ public class Zone : MonoBehaviour
         if (other.GetComponent<BulletLogic>())
         {
            // Debug.Log(TriggerBulletID[other.GetComponent<BulletLogic>().BulletID - 1]);
-            TriggerBulletID[other.GetComponent<BulletLogic>().BulletID-1].Add(other.GetComponent<BulletLogic>().BulletID); 
+            triggerBulletID[other.GetComponent<BulletLogic>().BulletID-1].Add(other.GetComponent<BulletLogic>().BulletID); 
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<BulletLogic>())
         {
-            TriggerBulletID[other.GetComponent<BulletLogic>().BulletID-1].Remove(other.GetComponent<BulletLogic>().BulletID);
+            triggerBulletID[other.GetComponent<BulletLogic>().BulletID-1].Remove(other.GetComponent<BulletLogic>().BulletID);
         }
     }
 }

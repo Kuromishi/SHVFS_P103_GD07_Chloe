@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using UnityEngine.UI;
 
     public class TeamPointSystem : Singleton<TeamPointSystem>
     {
@@ -47,6 +48,15 @@ using System;
 
                 teams[matchingTeamIndex].Members.Add(scorerComponent);
             }
+            TextScore[] text = FindObjectsOfType<TextScore>();
+                    for (var i = 0; i < teams.Count; i++)
+                    {
+                        if (teams[i].score_text == null)
+                        {
+                            teams[i].score_text = text[i].GetComponent<Text>();
+                        }
+                    }
+
 
 
             //With LINQ...
@@ -87,6 +97,7 @@ using System;
             }
             teams[j].TeamScore = totalscore;
             Debug.Log("Team " + $"{teams[j].ID}" + "'s score=" + $"{teams[j].TeamScore}");
+            teams[j].score_text.text = teams[j].TeamScore.ToString();
             //UIManager.Instance.UpdateScore(teams[j].TeamScore);
             totalscore = 0;
         }
@@ -99,6 +110,7 @@ using System;
         public int ID;
         public List<ScorerComponent> Members;
         public int TeamScore;
+        public Text score_text;
     }
 
 

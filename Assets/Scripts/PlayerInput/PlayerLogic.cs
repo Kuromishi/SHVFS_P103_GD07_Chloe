@@ -50,6 +50,7 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Start()
     {
+        Time.timeScale = 1;
         bulletNum = 7;
         anim.SetBool("Grounded", true);
         // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);

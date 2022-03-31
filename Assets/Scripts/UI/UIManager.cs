@@ -11,9 +11,12 @@ public class UIManager : Singleton<UIManager>
     private void Start()
     {
         teamNum = TeamPointSystem.Instance.teams.Count;
-        team = new GameObject[teamNum];
+       
     }
-
+    private void Update()
+    {
+        
+    }
     //public void UpdateScore(int score)
     //{
     //    teamScore.text = "" + score;

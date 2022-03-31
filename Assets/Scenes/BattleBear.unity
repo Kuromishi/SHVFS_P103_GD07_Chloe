@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7758496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7758497}
+  m_Layer: 0
+  m_Name: GunSpawnPoint6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7758497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.79, y: -31.08, z: 26.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 984699581}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &15294467
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +947,36 @@ Transform:
   m_Father: {fileID: 132589899}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 15.28, y: 90, z: 0}
+--- !u!1 &476475395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 476475396}
+  m_Layer: 0
+  m_Name: GunSpawnPoint7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &476475396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476475395}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -24, y: -31.77, z: 26.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 984699581}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486327120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,6 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664baa7ff8fa85049b1b3af494957c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bearScore: 
 --- !u!65 &753876957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1836,7 +1897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855069678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.1, y: -31.53, z: 39.57}
+  m_LocalPosition: {x: 10.68, y: -31.53, z: 35.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 984699581}
@@ -1938,6 +1999,9 @@ Transform:
   - {fileID: 837917839}
   - {fileID: 1464322258}
   - {fileID: 855069679}
+  - {fileID: 1887326197}
+  - {fileID: 7758497}
+  - {fileID: 476475396}
   m_Father: {fileID: 61729606}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1959,6 +2023,9 @@ MonoBehaviour:
   - {fileID: 837917839}
   - {fileID: 1464322258}
   - {fileID: 855069679}
+  - {fileID: 1887326197}
+  - {fileID: 7758497}
+  - {fileID: 476475396}
   tickRate: 4
   tickTimer: 0
 --- !u!1 &1064657274
@@ -3061,6 +3128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664baa7ff8fa85049b1b3af494957c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bearScore: 
 --- !u!65 &1612606354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3312,6 +3380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664baa7ff8fa85049b1b3af494957c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bearScore: 
 --- !u!1 &1662092758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3800,6 +3869,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teams: []
+--- !u!1 &1887326196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887326197}
+  m_Layer: 0
+  m_Name: GunSpawnPoint5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887326197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887326196}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8, y: -31.08, z: 26.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 984699581}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894000400
 GameObject:
   m_ObjectHideFlags: 0

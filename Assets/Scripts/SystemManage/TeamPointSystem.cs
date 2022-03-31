@@ -87,6 +87,7 @@ using System;
             }
             teams[j].TeamScore = totalscore;
             Debug.Log("Team " + $"{teams[j].ID}" + "'s score=" + $"{teams[j].TeamScore}");
+            //UIManager.Instance.UpdateScore(teams[j].TeamScore);
             totalscore = 0;
         }
     }

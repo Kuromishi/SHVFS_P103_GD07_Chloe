@@ -32,11 +32,11 @@ public class Zone : MonoBehaviour
             for(int i=0 ; i<TriggerBulletID.Length ; i++)
             {
                 //Debug.Log(TriggerBulletID[i]);
-                if ( TriggerBulletID[i].Count > maxBall)//一类的子弹的数量大于另一类子弹的数量
+                if ( TriggerBulletID[i].Count > maxBall)//一方子弹数大于之前的最多子弹数
                 {
                     maxBall = TriggerBulletID[i].Count;
                     maxTeamID = i;                          
-                    //UIManager.Instance.UpdateScore1(teams[i].TeamScore);
+                    
                 }
                 
             }
@@ -47,11 +47,6 @@ public class Zone : MonoBehaviour
                 else
                     bearScore[i] = 0;
             }
-            //for (int i = 0; i < TriggerBulletID.Length; i++)
-            //{
-            //    //Debug.Log(TriggerBulletID[i].Count);
-            //    //Debug.Log("Team " + $"{teams[i].ID}" + "'s score=" + $"{TriggerBulletID[i].Count}");
-            //}
 
         }
             

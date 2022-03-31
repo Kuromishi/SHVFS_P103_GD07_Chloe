@@ -51,6 +51,7 @@ public class Countdown : MonoBehaviour
             isGameOver = true;
             Cursor.lockState = CursorLockMode.Confined;
         }
+
     }
     public void RestartGame()
     {

@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Text teamScore1;
-    public Text teamScore2;
+    public GameObject[] team;
+    private int teamNum;
 
-    public void UpdateScore1(int score)
+    private void Start()
     {
-        teamScore1.text = "" + score;
+        teamNum = TeamPointSystem.Instance.teams.Count;
+        team = new GameObject[teamNum];
     }
-    public void UpdateScore2(int score)
-    {
-        teamScore2.text = "" + score;
-    }
+
+    //public void UpdateScore(int score)
+    //{
+    //    teamScore.text = "" + score;
+    //}
 }

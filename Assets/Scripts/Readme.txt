@@ -1,8 +1,8 @@
 Chloe
 1.Game over & Replay
-4.Display current game state (points, teams, etc. )
+2.Display current game state (points, teams, etc. )
 
-4 features:
+[4 features]
 1. Local multi player, 2 bears.
    One uses keyboard, one uses XBox Controller.
 2. Shoot projectile. 
@@ -14,3 +14,6 @@ Chloe
    You only have seven bullets at a time. You need to fill the bullets in a changed position.
 5.Display the amount of the zone controlled by each bear in the Gamescreen.
   [Countdown] Limited time to see which bear occupies the most area.(GUI Display)
+
+
+  There's also a start menu. The guide about the control is in the guide of the start menu.

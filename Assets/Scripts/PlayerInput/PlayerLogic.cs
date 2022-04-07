@@ -51,7 +51,7 @@ public class PlayerLogic : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
-        bulletNum = 7;
+        bulletNum = 12;
         anim.SetBool("Grounded", true);
         // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);
         Cursor.lockState = CursorLockMode.Locked;
@@ -133,7 +133,7 @@ public class PlayerLogic : MonoBehaviour
         if (other.gameObject.GetComponent<GunSpawn>() != null && bulletNum == 0)
         {
 
-            bulletNum = 7;
+            bulletNum = 12;
            // gun = Instantiate(gunPrefabs, gunPrefabsTransform.position, Quaternion.identity);
         }
     }

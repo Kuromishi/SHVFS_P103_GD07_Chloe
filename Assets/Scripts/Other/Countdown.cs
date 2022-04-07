@@ -10,7 +10,7 @@ public class Countdown : MonoBehaviour
     public Text countDownText;//在UI里显示时间
     private float intervalTime = 1;
 
-    public GameObject GameOverImage;
+    public GameObject gameOverImage;
     private bool isGameOver;
 
     //Use this for initialization
@@ -45,9 +45,9 @@ public class Countdown : MonoBehaviour
     }
     public void GameOver()
     {
-        if(!GameOverImage.activeSelf)
+        if(!gameOverImage.activeSelf)
         {
-            GameOverImage.SetActive(true);
+            gameOverImage.SetActive(true);
             Time.timeScale = 0;
             isGameOver = true;
             Cursor.lockState = CursorLockMode.Confined;

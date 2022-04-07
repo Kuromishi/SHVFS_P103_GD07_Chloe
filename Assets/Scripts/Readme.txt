@@ -11,9 +11,9 @@ Chloe
    Three empty zones.
    When there are more balls than the other bear's, the area belongs to you. 
 4.Random bullet spawn place changing
-   You only have seven bullets at a time. You need to fill the bullets in a changed position.
+   You only have twelve bullets at a time. You need to fill the bullets in a changed position.
 5.Display the amount of the zone controlled by each bear in the Gamescreen.
   [Countdown] Limited time to see which bear occupies the most area.(GUI Display)
 
 
-  There's also a start menu. The guide about the control is in the guide of the start menu.
+  There's also a start menu. The guide about the control is in the "Guide" of the start menu.

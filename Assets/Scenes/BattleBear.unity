@@ -595,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &118677420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 1374772345}
-  GameOverImage: {fileID: 118677419}
+  gameOverImage: {fileID: 118677419}
 --- !u!1 &620830217
 GameObject:
   m_ObjectHideFlags: 0
